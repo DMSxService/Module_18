@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> {{text}}</h1>
+    <h1>{{name}}</h1>
+    {% for i in list %}
+        <p>{{ i|floatformat:3 }}</p>
+    {% endfor %}
+    {% if len_list > 4 %}
+        <h2>OK</h2>
+    {% else %}
+        <h2>Not OK</h2>
+    {% endif %}
+</body>
+</html>

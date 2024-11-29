@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.urls import path
 from example1.views import index
 from task2.views import func_index, ClassIndex
-from task3.views import func_games, ClassPlatform, ClassCart
+# from task3.views import func_games, ClassPlatform, ClassCart
+from task4.views import func_games, ClassPlatform, ClassCart
 from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
