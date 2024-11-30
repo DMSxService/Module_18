@@ -1,12 +1,13 @@
-{% extends "index.html" %}
-
-{% block title %} Home - {{ block.super }} {% endblock %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-    Привет пассажир
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="message">
+        <button type="submit">Send</button>
+    </form>
 </body>
 </html>

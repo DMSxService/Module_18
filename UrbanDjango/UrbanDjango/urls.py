@@ -20,14 +20,18 @@ from example1.views import index
 from task2.views import func_index, ClassIndex
 # from task3.views import func_games, ClassPlatform, ClassCart
 from task4.views import func_games, ClassPlatform, ClassCart
+from task5.views import sign_up_by_django, sign_up_by_html
 from django.views.generic import TemplateView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
-    path('index/', TemplateView.as_view(template_name='index2.html')),
+    # path('index/', TemplateView.as_view(template_name='index2.html')),
+    # path('index/', simple_post),
     path('func/', func_index),
     path('class/', ClassIndex.as_view()),
     path('platform/', ClassPlatform.as_view()),
     path('platform/games/', func_games),
     path('platform/cart/', ClassCart.as_view()),
+    path('sign_up_by_django/', sign_up_by_django),
+    path('sign_up_by_html/', sign_up_by_html),
 ]
